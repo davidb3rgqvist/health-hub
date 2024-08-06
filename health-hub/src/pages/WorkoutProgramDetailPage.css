@@ -1,0 +1,51 @@
+.workout-detail-container {
+    background-color:#ffffff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-container {
+    margin: 20px 0;
+  }
+  
+  .exercise-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .interaction-section button {
+    margin-right: 10px;
+    background: linear-gradient(to right, #af206e, #6f5aad);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .interaction-section button:hover {
+    opacity: 0.9;
+  }
+  
+  .comment-section {
+    margin: 20px 0;
+  }
+  
+  .trainer-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .trainer-info img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .trainer-info p {
+    margin-top: 10px;
+  }
+  
