@@ -1,0 +1,22 @@
+.main-header {
+    background: linear-gradient(to right, #af206e, #6f5aad);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .main-header nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .main-header nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
