@@ -1,35 +1,23 @@
-import React, { createContext, useState, useEffect } from 'react';
-import authService from '../services/authService';
-import api from '../services/api';
+import React, { createContext, useState } from 'react';
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      // Fetch user data if needed
-    }
-  }, []);
-
-  const login = async (username, password) => {
-    const data = await authService.login(username, password);
-    setUser(data.user);
+  const login = () => {
+    setIsAuthenticated(true);
   };
 
   const logout = () => {
-    authService.logout();
-    setUser(null);
+    setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export { AuthContext, AuthProvider };
+export default AuthProvider;

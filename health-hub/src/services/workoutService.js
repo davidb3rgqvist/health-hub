@@ -10,7 +10,9 @@ const createWorkoutProgram = async (data) => {
   return response.data;
 };
 
-export default {
+const workoutService = {
   getWorkoutPrograms,
   createWorkoutProgram,
 };
+
+export default workoutService;

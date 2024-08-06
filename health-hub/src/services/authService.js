@@ -26,8 +26,10 @@ const logout = () => {
   delete api.defaults.headers.common['Authorization'];
 };
 
-export default {
+const authService = {
   register,
   login,
   logout,
 };
+
+export default authService;
