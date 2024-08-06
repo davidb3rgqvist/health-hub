@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import workoutService from '../services/workoutService';
-import Header from '../components/Header';
-import './WorkoutProgramDetailPage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function WorkoutProgramDetailPage() {
   const { id } = useParams();
@@ -22,7 +22,7 @@ function WorkoutProgramDetailPage() {
 
   return (
     <div>
-      <Header />
+      <NavBar />
       <div className="workout-detail-container">
         <h2>{workoutProgram.title}</h2>
         <div className="video-container">

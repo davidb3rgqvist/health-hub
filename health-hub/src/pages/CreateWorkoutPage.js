@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import workoutService from '../services/workoutService';
-import Header from '../components/Header';
-import './CreateWorkoutPage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function CreateWorkoutPage() {
   const [title, setTitle] = useState('');
@@ -29,7 +29,7 @@ function CreateWorkoutPage() {
 
   return (
     <div>
-      <Header />
+      <NavBar />
       <div className="create-workout-container">
         <h2>Create Workout Program</h2>
         <form onSubmit={handleCreateWorkout}>

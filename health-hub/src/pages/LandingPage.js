@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
-import './LandingPage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function LandingPage() {
   return (
     <div className="landing-page">
-      <Header />
+      <NavBar />
       <section className="hero">
         <h1>Welcome to HealthHub</h1>
         <p>Your community for fitness and wellness</p>

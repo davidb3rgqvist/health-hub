@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import workoutService from '../services/workoutService';
-import Header from '../components/Header';
-import './WorkoutProgramsPage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function WorkoutProgramsPage() {
   const [workoutPrograms, setWorkoutPrograms] = useState([]);
@@ -16,7 +16,7 @@ function WorkoutProgramsPage() {
 
   return (
     <div>
-      <Header />
+      <NavBar />
       <div className="workout-programs-container">
         <h2>Workout Programs</h2>
         <ul>

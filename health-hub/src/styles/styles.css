@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #3a3a3a;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Medium', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Button Styles */
+  .btn-gradient {
+    background: linear-gradient(to right, #af206e, #6f5aad);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-gradient:hover {
+    opacity: 0.9;
+  }
+  
+  .Button {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .Wide {
+    width: 100%;
+  }
+  
+  .Bright {
+    font-weight: bold;
+  }
+  
+  /* Layout Containers */
+  .auth-container,
+  .create-workout-container,
+  .search-browse-container,
+  .workout-detail-container,
+  .workout-programs-container {
+    background-color: #efefef;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .auth-container,
+  .create-workout-container,
+  .search-browse-container,
+  .workout-detail-container,
+  .workout-programs-container {
+    max-width: 800px;
+  }
+  
+  .auth-container {
+    max-width: 400px;
+  }
+  
+  .create-workout-container {
+    max-width: 600px;
+  }
+  
+  .search-browse-container {
+    max-width: 600px;
+  }
+  
+  /* Form Styles */
+  .auth-container form div,
+  .create-workout-container form div,
+  .search-browse-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .auth-container form label,
+  .create-workout-container form label,
+  .search-browse-container form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .auth-container form input,
+  .create-workout-container form input,
+  .create-workout-container form textarea,
+  .search-browse-container form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Page Specific Styles */
+  .landing-page {
+    text-align: center;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #af206e, #6f5aad);
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .benefits, .features, .testimonials {
+    padding: 20px;
+  }
+  
+  .benefits ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer {
+    background-color: #efefef;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: #3a3a3a;
+    text-decoration: none;
+  }
+  
+  .NavBar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .NavLink {
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  .NavLink:hover,
+  .NavLink:focus,
+  .Active {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .profile-page {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #efefef;
+    padding: 20px;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-info img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-info h2 {
+    margin-top: 10px;
+  }
+  
+  .sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: #3a3a3a;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .main-content section {
+    margin-bottom: 20px;
+  }
+  
+  .interaction-buttons button,
+  .interaction-section button {
+    margin-right: 10px;
+    background: linear-gradient(to right, #af206e, #6f5aad);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .interaction-buttons button:hover,
+  .interaction-section button:hover {
+    opacity: 0.9;
+  }
+  
+  .search-browse-container .results {
+    margin-top: 20px;
+  }
+  
+  .search-browse-container .result-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Workout Detail Page */
+  .workout-detail-container {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-container {
+    margin: 20px 0;
+  }
+  
+  .exercise-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .comment-section {
+    margin: 20px 0;
+  }
+  
+  .trainer-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .trainer-info img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .trainer-info p {
+    margin-top: 10px;
+  }
+  
+  /* Workout Programs Page */
+  .workout-programs-container {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workout-programs-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .workout-programs-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-program-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

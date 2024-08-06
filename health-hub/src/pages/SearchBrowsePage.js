@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import workoutService from '../services/workoutService';
-import Header from '../components/Header';
-import './SearchBrowsePage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function SearchBrowsePage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,7 +15,7 @@ function SearchBrowsePage() {
 
   return (
     <div>
-      <Header />
+      <NavBar />
       <div className="search-browse-container">
         <h2>Search Workout Programs</h2>
         <form onSubmit={handleSearch}>

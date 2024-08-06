@@ -1,23 +1,51 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+export const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
 
-  const login = () => {
-    setIsAuthenticated(true);
+  useEffect(() => {
+    
+    const checkLoggedInUser = async () => {
+      try {
+        const { data } = await axios.get('/dj-rest-auth/user/');
+        setCurrentUser(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    checkLoggedInUser();
+  }, []);
+
+  const login = async (username, password) => {
+    try {
+      const { data } = await axios.post('/dj-rest-auth/login/', { username, password });
+      setCurrentUser(data.user);
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const logout = () => {
-    setIsAuthenticated(false);
+  const logout = async () => {
+    try {
+      await axios.post('/dj-rest-auth/logout/');
+      setCurrentUser(null);
+      navigate('/login');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ currentUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export default AuthProvider;
+export const useAuth = () => useContext(AuthContext);

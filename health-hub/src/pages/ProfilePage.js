@@ -1,10 +1,10 @@
-import Header from '../components/Header';
-import './ProfilePage.css';
+import '../styles/styles.css';
+import NavBar from '../components/NavBar';
 
 function ProfilePage() {
   return (
     <div className="profile-page">
-      <Header />
+      <NavBar />
       <div className="sidebar">
         <div className="profile-info">
           <img src="profile-pic-url" alt="Profile" />
