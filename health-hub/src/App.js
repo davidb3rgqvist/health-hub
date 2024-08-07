@@ -10,6 +10,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 import SignInForm from './pages/SignInForm';
 import SignUpForm from './pages/SignUpForm';
+import CommunityGuidelines from './pages/CommunityGuidelines';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<SignInForm />} />
           <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/community-guidelines" element={<CommunityGuidelines />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/create-workout" element={<CreateWorkoutPage />} />
